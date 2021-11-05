@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ellie Template</title>
+    <title>SkyTrack</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,400i,500,700|Titillium+Web:600" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
@@ -19,9 +19,19 @@
 			display: none;
 		  }
 		}
+		.float{
+			position:fixed;
+			width:120px;
+			height:60px;
+			bottom:40px;
+			right:40px;
+			color:#FFF;
+			border-radius:30px;
+		}
 		</style>
 </head>
-<body class="">
+<body style="max-width: 100%;
+    overflow-x: hidden;">
     <div class="body-wrap">
         <header class="site-header">
             <div class="container">
@@ -30,7 +40,7 @@
                         <h1 class="m-0">
                             <a href="#">
 								<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-								    <title>Ellie</title>
+								    <title>SkyTrack</title>
 								    <defs>
 								        <linearGradient x1="0%" y1="0%" y2="100%" id="logo-a">
 								            <stop stop-color="#4353FF" offset="0%"/>
@@ -455,7 +465,7 @@
 			</div>
             <div class="container">
                 <div class="site-footer-inner has-top-divider">
-                    <div class="footer-copyright">&copy; 2021 SkyDan, all rights reserved</div>
+                    <div class="footer-copyright">&copy; 2021 SkyTrack, all rights reserved</div>
 					<ul class="footer-social-links list-reset">
 						<li>
 							<a href="#">
@@ -546,11 +556,26 @@
 				return false;
 			  }
 			  else {
+				event.preventDefault();
 				submitted=true;
 				alert("Subscribe Success!") ;//Validation Message
 				return true;
 			  }
+
+			// 	event.preventDefault();
+			
+			// axios.post('https://docs.google.com/forms/u/0/d/e/1FAIpQLSdMGax-2hWqa-fojAJGTpdJay7Irld4Pd50WcbxITkH7ZZOHw/formResponse')
+			// .then(function (response) {
+			// 	console.log(response);
+			// 	alert("Subscribe Saaaaauccess!")
+			// })
+			// .catch(function (error) {
+			// 	console.log(error);
+			// });
 			}
 			</script>
+
+	<a href="https://discord.gg/5D9uJvj3" class="button button-primary button-block float my-float" type="submit">DISCORD</a>
+
 </body>
 </html>
